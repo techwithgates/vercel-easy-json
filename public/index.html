@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <title>Easy JSON</title>
+    <link rel='stylesheet' type='text/css' href='/static/style.css'>
+</head>
+<body>
+    <h1>Easy JSON</h1>
+    <!-- modal area -->
+    <div id="modal" class="modal">
+        <div id="modal-content">
+            <div id="modal-top-area">
+                <div id="copy-area" onclick="copyJson()">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                        id="copy-icon">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M14.25 9.75 16.5 12l-2.25 2.25m-4.5 0L7.5 12l2.25-2.25M6 
+                        20.25h12A2.25 2.25 0 0 0 20.25 18V6A2.25 2.25 0 0 0 18 3.75H6A2.25 2.25 0 0 0 3.75 6v12A2.25 2.25 0 0 0 6 20.25Z"/>
+                    </svg>
+                    <p id="copy-text">Copy JSON</p>
+                </div>
+                <div id="download-area" onclick="saveFile()">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                        id="download-icon">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 
+                        0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
+                    </svg>               
+                    <p>Download</p>
+                </div>
+                <span class="close-btn" id="close-modal-btn">&times;</span>
+            </div>
+            <div id="json-view-area"></div>
+        </div>
+    </div>
+    <!-- file preview area -->
+    <div class='container'>
+        <form action='/convert' method='post' enctype='multipart/form-data' onsubmit="submitFile(event)">
+            <input type='file' name='csvfile' accept='.csv' multiple>
+            <button id='btn'>Convert</button>
+        </form>
+        <div id='file-preview'></div>
+    </div>
+    <script src='/static/file.js'></script>
+    <script src='/static/modal.js'></script>
+</body>
+</html>

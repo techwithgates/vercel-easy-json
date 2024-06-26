@@ -1,0 +1,219 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    padding: 0 20px 0 20px;
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #333;
+}
+
+.btn {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+#file-preview {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+.file-area {
+    background-color: #eaeaea;
+    border-radius: 5px;
+    padding: 0 10px 0 10px;
+    margin: 10px;
+}
+
+.file-area:hover {
+    background-color: #e3e0e0;
+}
+
+.file-area p {
+    margin: 0;
+    padding-bottom: 10px;
+}
+
+.icon {
+    margin: 0;
+    text-align: right;
+    padding-top: 6px;
+}
+
+.icon svg {
+    height: 20px;
+}
+
+.icon svg:hover {
+    cursor: pointer;
+}
+
+.file-input {
+    margin-bottom: 1rem;
+}
+
+input[type="file"] {
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+button {
+    margin-left: 5px;
+    background-color: #298cf6;
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    letter-spacing: 1px;
+    visibility: hidden;
+}
+
+button:hover {
+    background-color: #247fdf;
+}
+
+.open-modal-area {
+    padding-bottom: 10px;
+    display: flex;
+}
+
+.open-modal-btn {
+    display: none;
+}
+
+.open-modal-area span {
+    cursor: pointer;
+    color: rgb(64, 64, 225);
+}
+
+/* modal design */
+
+#modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+#modal-content {
+    background-color: rgb(237, 237, 237);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    width: 800px;
+    height: 600px;
+    animation: fadeIn 0.3s ease-out;
+    max-width: 900px;
+    max-height: 600px;
+}
+
+#modal-top-area {
+    display: flex;
+    gap: 10px;
+    /* justify-content: space-between; */
+}
+
+#copy-area, #download-area {
+    display: flex;
+    font-weight: 500;
+    background-color: #2682e4;
+    transition: background-color 0.3s ease;
+    color: white;
+    padding: 4px;
+    border-radius: 7px;
+    border: 2px solid #1a65b6;
+}
+
+#copy-area:hover, #download-area:hover {
+    cursor: pointer;
+    background-color: #308ef3;
+}
+
+#copy-area p, #download-area p {
+    margin: 8px 0px 0px 3px;
+    padding: 0;
+    font-size: 14px;
+}
+
+#copy-icon {
+    height: 30px;
+    width: 30px;
+}
+
+#download-icon {
+    height: 27px;
+    width: 27px;
+}
+
+.close-btn {
+    color: rgb(85, 83, 83);
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: -10px;
+    padding: 0;
+    margin-left: auto;
+}
+
+#json-view-area {
+    background-color: #fff;
+    margin-top: 10px;
+    padding: 5px;
+    border-radius: 8px;
+    max-width: 800px;
+    max-height: 550px;
+    overflow-y: scroll;
+}
+
+.square-bracket {
+    margin: 10px;
+}
+
+.bracket {
+    padding: 10px 10px 10px 40px;
+}
+
+.json-field {
+    padding: 10px 10px 5px 80px;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
