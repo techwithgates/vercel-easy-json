@@ -66,7 +66,7 @@ const submitFile = async (e) => {
     files.length = 0
     btn.style.visibility = 'hidden'
 
-    const res = await fetch('/upload', {
+    const res = await fetch('/api/upload', {
         method: 'POST',
         body: formData
     })
