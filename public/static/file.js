@@ -66,7 +66,7 @@ const submitFile = async (e) => {
     files.length = 0
     btn.style.visibility = 'hidden'
 
-    const res = await fetch('https://go-easy-json.netlify.app:8080/upload', {
+    const res = await fetch('https://easy-json.vercel.app/upload', {
         method: 'POST',
         body: formData
     })
