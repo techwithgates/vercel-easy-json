@@ -1,8 +1,12 @@
 {
     "routes": [
         {
-          "src": "/api/main",
+          "src": "/",
           "dest": "api/main.go"
+        },
+        {
+          "src": "/upload",
+          "dest": "api/upload.go"
         }
     ]
 }
